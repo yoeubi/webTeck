@@ -1,25 +1,15 @@
-import React, { Component } from 'react';
-import { observer, inject } from 'mobx-react';
+import React from 'react';
+import './Search.scss';
 
-@inject('keywordStore')
-@observer
-class Search extends Component {
-  render() {
-    const { keywordStore } = this.props;
-    console.log(keywordStore.keyword);
-    return (
-      <div>
-        <form>
-          <input
-            type="text"
-            onChange={keywordStore.insertKeyword}
-            value={keywordStore.keyword}
-          />
-          <button>Search</button>
-        </form>
-      </div>
-    );
-  }
-}
+const Search = ({ val, onChange }) => {
+  return (
+    <div>
+      <form>
+        <input type="text" onChange={onChange} value={val} />
+        <button>Search</button>
+      </form>
+    </div>
+  );
+};
 
 export default Search;
