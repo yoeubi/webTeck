@@ -15,4 +15,7 @@ export default class GifListStore {
     this.offset = this.offset+10;
 
   };
+  @action resetGitList = () => {
+    this.gifList = [];
+  }
 }

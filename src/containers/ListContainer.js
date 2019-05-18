@@ -24,12 +24,13 @@ export default class ListContainer extends Component{
     let curH = document.body.clientHeight;
     let scorllTop = window.scrollY;
     
-    console.log(curH, scorllTop);
-    console.log((curH - window.innerHeight) * 0.7);
-    console.log(scorllTop);
-    if((curH - window.innerHeight) * 0.7 < scorllTop){
-      getList(this.props.keyword, this.props.offset)
-      .then(({ data: { data, pagination } }) => {
+    // console.log(curH, scorllTop);
+    // console.log((curH - window.innerHeight) * 0.7);
+    // console.log(scorllTop);
+    if((curH - window.innerHeight) * 0.9gi t < scorllTop){
+      var axios = getList(this.props.keyword, this.props.offset) 
+      if(!axios) return false;
+      axios.then(({ data: { data, pagination } }) => {
        const { insertGitList } = this.props;
        insertGitList({
          newGitList: data,

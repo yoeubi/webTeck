@@ -6,15 +6,20 @@ import {getList} from '../service';
   keyword: stores.keywordStore.keyword,
   insertKeyword: stores.keywordStore.insertKeyword,
   insertGitList: stores.gifListStore.insertGitList,
+  resetGitList: stores.gifListStore.resetGitList,
+
   gifList: stores.gifListStore.gifList,
   offset: stores.gifListStore.offset,
 }))
 @observer
 class SearchContainer extends Component {
   onSubmit = e => {
+    const { resetGitList } = this.props;
+
     e.preventDefault();
+    resetGitList();
     getList(this.props.keyword)
-     .then(({ data: { data, pagination } }) => {
+    .then(({ data: { data, pagination } }) => {
       const { insertGitList } = this.props;
       insertGitList({
         newGitList: data,

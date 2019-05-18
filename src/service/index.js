@@ -1,8 +1,13 @@
 import axios from 'axios';
 
+let isRequset = false;
 
 export const getList = (keyword, offset=0) => {
-    const res = axios({
+    
+    if(isRequset) return false;
+    isRequset = true;
+    console.log(offset)
+    let res = axios({
       method: 'GET',
       url: 'http://api.giphy.com/v1/gifs/search',
       params: {
@@ -15,9 +20,8 @@ export const getList = (keyword, offset=0) => {
       headers: {
         'Content-Type': 'application/json',
       },
-    
     });
-
+    res.then(()=>{isRequset = false;})
     return res;
     
   };
