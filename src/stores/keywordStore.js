@@ -1,7 +1,7 @@
 import { observable, action } from 'mobx';
 
 export default class KeywordStore {
-  @observable keyword = '';
+  @observable keyword = 'apple';
 
   @action insertKeyword = val => {
     this.keyword = val;

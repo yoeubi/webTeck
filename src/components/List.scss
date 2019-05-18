@@ -1,2 +1,7 @@
-.listWrap {background: red};
+.list {
+    background: blue;
+    display: flex;
+    justify-items:  center;
+    flex-grow: 0
+};
 

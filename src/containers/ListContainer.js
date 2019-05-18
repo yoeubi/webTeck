@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { observer, inject } from 'mobx-react';
 import List from '../components/List';
+import style from './ListContainer.scss';
 
 @inject('gifListStore')
 @observer
@@ -12,7 +13,7 @@ export default class ListContainer extends Component{
 
   creatList(gifList){
     return gifList.map((gif, idx)=>{
-      return <List key={idx} gif={gif} idx={idx} />
+      return <List key={gif.id} gif={gif} idx={idx} />
     })
   }
 
@@ -21,7 +22,7 @@ export default class ListContainer extends Component{
     const List = this.creatList(gifListStore.gifList);
 
     return (
-      <ul>
+      <ul className ={style.listWrap}>
         {List}
       </ul>
     )

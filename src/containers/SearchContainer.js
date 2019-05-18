@@ -35,6 +35,7 @@ class SearchContainer extends Component {
       });
     });
   };
+
   render() {
     const { keyword, insertKeyword } = this.props;
     return (
