@@ -27,7 +27,7 @@ export default class ListContainer extends Component{
     // console.log(curH, scorllTop);
     // console.log((curH - window.innerHeight) * 0.7);
     // console.log(scorllTop);
-    if((curH - window.innerHeight) * 0.9gi t < scorllTop){
+    if((curH - window.innerHeight) * 0.9 < scorllTop){
       var axios = getList(this.props.keyword, this.props.offset) 
       if(!axios) return false;
       axios.then(({ data: { data, pagination } }) => {
