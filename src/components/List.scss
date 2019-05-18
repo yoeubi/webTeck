@@ -1,7 +1,13 @@
 .list {
-    background: blue;
-    display: flex;
-    justify-items:  center;
-    flex-grow: 0
-};
-
+  width: calc(33% - 20px);
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
