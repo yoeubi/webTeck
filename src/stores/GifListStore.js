@@ -4,7 +4,7 @@ export default class GifListStore {
   @observable gifList = [];
   @observable totalCount = 0;
   @observable count = 0;
-  @observable offset = 0;
+  @observable offset = 1;
 
   @action insertGitList = ({ newGitList, newTotalCount, newCount }) => {
     console.log(newGitList, newTotalCount, newCount);
@@ -17,5 +17,6 @@ export default class GifListStore {
   };
   @action resetGitList = () => {
     this.gifList = [];
+    this.offset = 0;
   }
 }

@@ -11,7 +11,7 @@ export const getList = (keyword, offset=0) => {
       method: 'GET',
       url: 'http://api.giphy.com/v1/gifs/search',
       params: {
-        api_key: 'BfmB0JOT7JOaRjSsHk1mE48EkrYuBqbM',
+        api_key: '5jAu4p6gh8P4bAUJzhn99DWSKcKZS14r',
         q: keyword,
         offset: offset,
         limit: 10,
