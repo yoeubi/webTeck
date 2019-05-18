@@ -1,2 +1,26 @@
 .search {
+  margin: 50px;
+  form {
+    display: flex;
+    border-radius: 5px;
+    input {
+      height: 50px;
+      flex-grow: 1;
+      font-size: 40px;
+      background: #29b6f6;
+      color: white;
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+    }
+    button {
+      width: 100px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      background-color: #0086c3;
+      color: white;
+      font-size: 30px;
+    }
+  }
 }

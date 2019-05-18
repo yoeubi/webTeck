@@ -1,12 +1,12 @@
 import React from 'react';
-import './Search.scss';
+import styles from './Search.scss';
 
 const Search = ({ val, onChange, onSubmit }) => {
   return (
-    <div className="search">
+    <div className={styles.search}>
       <form onSubmit={onSubmit}>
         <input type="text" onChange={onChange} value={val} />
-        <button>Search</button>
+        <button>검색</button>
       </form>
     </div>
   );
