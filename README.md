@@ -3,7 +3,7 @@
 - GDG Lorea WebTech
 
 # 기술스택
-- 리엑트 / axios / mobx / react-router
+- 리엑트 / axios / mobx / react-router-dom
 
 # Giphy
 
