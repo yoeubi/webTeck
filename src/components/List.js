@@ -1,15 +1,12 @@
-import React, {Component} from "react";
+import React from 'react';
+import style from './List.scss';
 
-import { observer, inject } from 'mobx-react';
-import '../scss';
 
-@inject('gifListStore')
-@observer
-export default class List extends Component{
-  render() {
-    return (
-      <div className="test">test</div>
-    )
-  }
+export default function List({gif, idx}){
+  // console.log(props);
+  return (
+    <li className={style.listWrap}>
+      <div className={style.test}> {gif} / {idx} </div>
+    </li>
+  )
 };
-
